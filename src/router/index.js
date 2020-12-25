@@ -13,7 +13,9 @@ const routes = [
     component: () => import('@/views/Home')
   },
   { path: '*', redirect: '/404' },
-  { path: '/404', component: () => import('@/views/PageNotFound') }
+  { path: '/404', component: () => import('@/views/PageNotFound') },
+  { path: '/500', component: () => import('@/views/PageAPIError') },
+  { path: '/501', component: () => import('@/views/PageError') }
 ]
 
 const router = new VueRouter({

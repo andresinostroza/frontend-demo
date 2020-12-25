@@ -1,12 +1,13 @@
 import Axios from 'axios'
+import ApiError from '@/models/api-error'
 
 const onResponse = (response) => {
   return response
 }
 
+// eslint-disable-next-line handle-callback-err
 const onErrorResponse = (error) => {
-  console.warn('Do something with the error, send it to SNS for example')
-  return Promise.reject(error)
+  throw new ApiError()
 }
 
 const ClientApiPrototype = function (url) {

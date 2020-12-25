@@ -18,6 +18,7 @@
 import VideoAdList from '@/components/video-ad-list.vue'
 import VideoEngagementChart from '@/components/video-engagement-chart.vue'
 import { fetchVideos, fetchVideo } from '@/provider'
+import ApiError from '@/models/api-error'
 
 export default {
   name: 'Home',
@@ -52,13 +53,31 @@ export default {
   methods: {
     async getVideos () {
       this.loadingVideos = true
-      this.videosService = await fetchVideos()
-      this.loadingVideos = false
+      try {
+        this.videosService = await fetchVideos()
+      } catch (err) {
+        if (err instanceof ApiError) {
+          this.$router.push('/500')
+        } else {
+          this.$router.push('/501')
+        }
+      } finally {
+        this.loadingVideos = false
+      }
     },
     async getVideoDetail (uuid) {
       this.loadingVideoDetail = true
-      this.videoDetailService = await fetchVideo(uuid)
-      this.loadingVideoDetail = false
+      try {
+        this.videoDetailService = await fetchVideo(uuid)
+      } catch (err) {
+        if (err instanceof ApiError) {
+          this.$router.push('/500')
+        } else {
+          this.$router.push('/501')
+        }
+      } finally {
+        this.loadingVideoDetail = false
+      }
     },
     onChangeVideo (video) {
       this.getVideoDetail(video.uuid)
