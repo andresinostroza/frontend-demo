@@ -1,14 +1,8 @@
 <template>
   <div class="NotFound">
-    <v-container>
-      <v-layout row wrap>
-        <v-flex xs12>
-          <v-card height="400" color="transparent" flat>
-            <div class="display-3 mt-5">Page not found.</div>
-          </v-card>
-        </v-flex>
-      </v-layout>
-    </v-container>
+    <b-container>
+      <div class="display-3 mt-5">Page not found.</div>
+    </b-container>
   </div>
 </template>
 <script>

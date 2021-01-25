@@ -1,10 +1,11 @@
 {
-  "name": "synetiq-challenge-frontend",
+  "name": "frontend-demo",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "development": "vue-cli-service serve",
+    "production": "vue-cli-service build",
+    "mirage": "vue-cli-service build --mode mirage",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
@@ -15,6 +16,7 @@
     "core-js": "^3.6.5",
     "highcharts": "^8.2.2",
     "highcharts-vue": "^1.3.5",
+    "miragejs": "^0.1.41",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"

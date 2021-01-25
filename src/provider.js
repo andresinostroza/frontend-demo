@@ -8,7 +8,7 @@ const fetchVideos = async () => {
 }
 
 const fetchVideo = async (uuid) => {
-  const videoResponse = await ClientApi.get(`/video/${uuid}`)
+  const videoResponse = await ClientApi.get(`/videos/${uuid}`)
   return new VideoDetailService(videoResponse.data)
 }
 

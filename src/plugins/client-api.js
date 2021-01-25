@@ -5,9 +5,8 @@ const onResponse = (response) => {
   return response
 }
 
-// eslint-disable-next-line handle-callback-err
 const onErrorResponse = (error) => {
-  throw new ApiError()
+  throw new ApiError(error)
 }
 
 const ClientApiPrototype = function (url) {

@@ -56,6 +56,7 @@ export default {
       try {
         this.videosService = await fetchVideos()
       } catch (err) {
+        console.log(err)
         if (err instanceof ApiError) {
           this.$router.push('/500')
         } else {
@@ -70,6 +71,7 @@ export default {
       try {
         this.videoDetailService = await fetchVideo(uuid)
       } catch (err) {
+        console.log(err)
         if (err instanceof ApiError) {
           this.$router.push('/500')
         } else {

@@ -1,6 +1,6 @@
 export default class VideoModel {
-  constructor ({ name, uuid }) {
+  constructor ({ name, id }) {
     this.name = name
-    this.uuid = uuid
+    this.uuid = id
   }
 }

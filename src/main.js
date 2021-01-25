@@ -4,8 +4,13 @@ import router from './router'
 import store from './store'
 import { LayoutPlugin, ListGroupPlugin, OverlayPlugin, SkeletonPlugin, AlertPlugin } from 'bootstrap-vue'
 import Highcharts from 'highcharts'
+import makeServer from './plugins/mirage/index'
 
 import Annotation from 'highcharts/modules/annotations'
+
+if (['development', 'mirage'].includes(process.env.NODE_ENV)) {
+  makeServer({ environment: 'development' })
+}
 
 Vue.config.productionTip = false
 Vue.use(LayoutPlugin)

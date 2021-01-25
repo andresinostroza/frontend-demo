@@ -1,29 +1,47 @@
-# challenge-frontend
+# Frontend-demo
 
-## Local development
-### Project setup
+Front end demo is a demo app that shows the engagements (emotions metric) by videos including a time line with the scenes by video
+
+The code contains the following:
+
+* *Dockerfile.yml* - Docker file that creates the image node:14.15.4-alpine 
+* */src* - It contains the code
+* */tests* - It contains some simple tests
+* *.env.development* - It contains environment variables for dev mode
+* *.env.production* - Same for production
+* *package.json* - package json file for dependencies as usual
+* *jest.config.js* - Jest configuration
+
+## Getting Started
+
+To get started, clone this repository locally:
+
 ```
-npm install
+$ git clone https://github.com/andresinostroza/frontend-demo
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### Prerequisites
 
-### Run your unit tests
-```
-npm run test:unit
-```
+To run the project, you will to:
 
-## Container for Production
+1. Install [Docker](https://docs.docker.com/install/).
+
+## Container
 ### Build Container
+Set the ENVIRONMENT for the corresponding environment (development, mirage, production).
+Mirage environment is use to mock data
+
 ```
-docker build -t frontend-challenge .
+docker build -t frontend-demo . --build-arg ENVIRONMENT=mirage
 ```
 ### Run Container
 ```
-docker run -it -p 9000:8080 --rm --name frontend-challenge-1 frontend-challenge
+docker run -it -p 9000:8080 --rm --name frontend-demo-1 frontend-demo
+```
+
+### Check the app
+```
+http://localhost:9000/
 ```
 
 ### Customize configuration
