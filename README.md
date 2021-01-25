@@ -17,7 +17,7 @@ The code contains the following:
 To get started, clone this repository locally:
 
 ```
-$ git clone https://github.com/andresinostroza/frontend-demo
+git clone https://github.com/andresinostroza/frontend-demo
 ```
 
 ### Prerequisites
