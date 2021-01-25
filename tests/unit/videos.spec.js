@@ -1,11 +1,11 @@
 import { shallowMount, createLocalVue, mount } from '@vue/test-utils'
-import { ListGroupPlugin } from 'bootstrap-vue'
+// import { ListGroupPlugin } from 'bootstrap-vue'
 
 import VideoAd from '@/components/video-ad.vue'
 import VideoModel from '@/models/video-model.js'
 
 const localVue = createLocalVue()
-localVue.use(ListGroupPlugin)
+// localVue.use(ListGroupPlugin)
 
 describe('video-ad.vue', () => {
   it('renders video name', () => {

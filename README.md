@@ -1,6 +1,7 @@
-# synetiq-challenge-frontend
+# challenge-frontend
 
-## Project setup
+## Local development
+### Project setup
 ```
 npm install
 ```
@@ -10,13 +11,19 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
 ### Run your unit tests
 ```
 npm run test:unit
+```
+
+## Container for Production
+### Build Container
+```
+docker build -t frontend-challenge .
+```
+### Run Container
+```
+docker run -it -p 9000:8080 --rm --name frontend-challenge-1 frontend-challenge
 ```
 
 ### Customize configuration

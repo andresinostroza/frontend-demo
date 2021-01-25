@@ -1,12 +1,12 @@
 import { createLocalVue, mount } from '@vue/test-utils'
-import { ListGroupPlugin } from 'bootstrap-vue'
+// import { ListGroupPlugin } from 'bootstrap-vue'
 
 import VideoAdList from '@/components/video-ad-list.vue'
 import VideoAd from '@/components/video-ad.vue'
 import VideoModel from '@/models/video-model.js'
 
 const localVue = createLocalVue()
-localVue.use(ListGroupPlugin)
+// localVue.use(ListGroupPlugin)
 
 describe('Video-ad-list.vue', () => {
   it('renders video list', () => {
