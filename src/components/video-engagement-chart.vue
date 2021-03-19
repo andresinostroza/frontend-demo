@@ -52,7 +52,8 @@ export default {
   },
   chartDefaultOptions: {
     title: {
-      text: 'Engagement time series'
+      text: 'Engagement time series',
+      margin: 50
     },
     yAxis: {
       title: {
